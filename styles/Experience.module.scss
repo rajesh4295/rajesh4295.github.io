@@ -1,0 +1,36 @@
+.experience {
+    .card {
+        margin-bottom: 20px;
+        .header {
+
+        }
+        .content {
+
+            .project {
+                margin-bottom: 20px;
+                .head {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    .name {
+                        font-size: 16px;
+                    }
+                    .year {
+                        font-size: 12px;
+                    }
+                }
+                .desc {
+                    margin-top: 10px;
+                    font-size: 14px;
+                }
+                .resp {
+                    font-size: 14px;
+                }
+                .tools {
+                    margin: 20px 5px 0 5px;
+                }
+            }
+
+        }
+    }
+}

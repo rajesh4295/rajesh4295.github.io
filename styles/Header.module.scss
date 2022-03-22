@@ -1,0 +1,23 @@
+@import "./variables.module.scss";
+
+.header {
+    // border: 1px solid;
+    display: flex;
+    padding-top: 20px;
+    height: 80px;
+
+
+    .themeSwitch {
+        margin-left: auto;
+
+        .switch {
+            height: 39px;
+            width: 68px;
+            overflow: visible;
+
+            .switchBase {
+                background-color: $navy;
+            }
+        }
+    }
+}

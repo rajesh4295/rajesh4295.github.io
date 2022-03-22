@@ -1,0 +1,23 @@
+@import './variables.module.scss';
+
+/*
+ * DO NOT import this file direclty in any other scss file. This file is only imported in TS/JS files.
+**/
+$theme-colors: (
+    "primaryLight": $primaryLight,
+    "secondaryLight": $secondaryLight,
+    "textLight": $textLight,
+    "accentLight": $accentLight,
+    "backgroundLight": $backgroundLight,
+    "primaryDark": $primaryDark,
+    "secondaryDark": $secondaryDark,
+    "textDark": $textDark,
+    "accentDark": $accentDark,
+    "backgroundDark": $backgroundDark
+);
+
+:export {
+    @each $key, $val in $theme-colors {
+        #{unquote($key)}: #{$val};
+    }
+}
