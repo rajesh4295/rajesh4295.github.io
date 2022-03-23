@@ -11,12 +11,12 @@ export const Footer = () => {
   return (
     <Box className={styles.footer}>
         <Box className={styles.note} sx={{color: theme.palette.secondary.main}}>
-          Have a project in mind? Let's connect.
+          Have a project in mind? Let&apos;s connect.
         </Box>
         <Box className={styles.social}>
-          <a className={styles.link} target='_blank' href={profileData.social?.linkedin}><LinkedIn /></a>
-          <a className={styles.link} target='_blank' href={profileData.social?.github}><GitHub /></a>
-          <a className={styles.link} target='_blank' href={profileData.social?.twitter}><Twitter /></a>
+          <a className={styles.link} target='_blank' rel="noreferrer" href={profileData.social?.linkedin}><LinkedIn /></a>
+          <a className={styles.link} target='_blank' rel="noreferrer" href={profileData.social?.github}><GitHub /></a>
+          <a className={styles.link} target='_blank' rel="noreferrer" href={profileData.social?.twitter}><Twitter /></a>
         </Box>
         <Box className={styles.copy} sx={{color: theme.palette.secondary.main}}>
             Made with <FavoriteRounded fontSize='small' sx={{color: theme.palette.text.secondary}} /> by {profileData.personal?.name}. All rights reserved 2022.

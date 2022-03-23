@@ -4,7 +4,7 @@ import { getTheme } from './theme';
 import { ThemeProvider, CssBaseline } from '@mui/material';
 
 const initialState: IAppState =  {
-    theme: getTheme(ThemeMode.LIGHT),
+    theme: getTheme(ThemeMode.DARK),
     switchTheme: () => {}
 }
 
