@@ -4,3 +4,5 @@ export * from './Header/Header';
 export * from './Summary/Summary';
 export * from './Skills/Skills';
 export * from './Experience/Experience';
+export * from './Education/Education';
+export * from './Footer/Footer';

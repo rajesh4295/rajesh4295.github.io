@@ -6,10 +6,7 @@ export interface IProfile {
     personal?: IPersonal;
     contact?: IContact;
     education?: IEducation[];
-    skills?: {
-        professional?: ISkills[];
-        personal?: ISkills[];
-    },
+    skills?: ISkills[];
     jobHistory?: IJobHistory[];
     projects?: IProject[];
     acheivements?: string[];

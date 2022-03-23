@@ -11,42 +11,35 @@ export const profileData: IProfile = {
         interests: ["Entrepreneurship", "Reading books", "Technology", "Gaming"]
     },
     contact: {
-        email: "rajesh4295@gmail.com",
-        phone: [7507984854, 9511694035],
-        skype: "rajesh4295",
     },
-    skills: {
-        professional: [
-            { name: "Javascript", type: "frontend", level: "advanced" },
-            { name: "Typescript", type: "frontend", level: "advanced" },
-            { name: "RxJS", type: "frontend", level: "advanced" },
-            { name: "Angular", type: "frontend", level: "advanced" },
-            { name: "NodeJS", type: "backend", level: "advanced" },
-            { name: "ExpressJS", type: "backend", level: "advanced" },
-            { name: "REST", type: "backend", level: "advanced" },
-            { name: "HTML5", type: "frontend", level: "advanced" },
-            { name: "CSS3/SASS/LESS", type: "frontend", level: "advanced" },
-            { name: "ReactJS", type: "frontend", level: "competent" },
-            { name: "NextJS", type: "frontend", level: "competent" },
-            { name: "GraphQL", type: "backend", level: "competent" },
-            { name: "MongoDB", type: "database", level: "competent" },
-            { name: "PostgreSQL", type: "database", level: "competent" },
-            { name: "Golang", type: "backend", level: "moderate" },
-            { name: "Docker", type: "backend", level: "moderate" },
-            { name: "GRPC", type: "backend", level: "learning" },
-            { name: "Web 3.0", type: "frontend", level: "learning" },
-            { name: "Kubernetes", type: "backend", level: "learning" }
-        ],
-        personal: [
-            {name: "Problem Solving"},
-            {name: "Quick Learning"},
-            {name: "Effective Planning"},
-            {name: "Effective Communication"},
-            {name: "Team Work"},
-            {name: "Flexibility"},
-            {name: "Adaptibility"}
-        ]
-    },
+    skills: [
+        { name: "Javascript", type: "frontend", level: "advanced" },
+        { name: "Typescript", type: "frontend", level: "advanced" },
+        { name: "RxJS", type: "frontend", level: "advanced" },
+        { name: "Angular", type: "frontend", level: "advanced" },
+        { name: "NodeJS", type: "backend", level: "advanced" },
+        { name: "ExpressJS", type: "backend", level: "advanced" },
+        { name: "REST", type: "backend", level: "advanced" },
+        { name: "HTML5", type: "frontend", level: "advanced" },
+        { name: "CSS3/SASS/LESS", type: "frontend", level: "advanced" },
+        { name: "ReactJS", type: "frontend", level: "competent" },
+        { name: "NextJS", type: "frontend", level: "competent" },
+        { name: "GraphQL", type: "backend", level: "competent" },
+        { name: "MongoDB", type: "database", level: "competent" },
+        { name: "PostgreSQL", type: "database", level: "competent" },
+        { name: "Golang", type: "backend", level: "moderate" },
+        { name: "Docker", type: "backend", level: "moderate" },
+        { name: "GRPC", type: "backend", level: "learning" },
+        { name: "Web 3.0", type: "frontend", level: "learning" },
+        { name: "Kubernetes", type: "backend", level: "learning" },
+        { name: "Problem Solving", type: 'soft' },
+        { name: "Quick Learning", type: 'soft' },
+        { name: "Effective Planning", type: 'soft' },
+        { name: "Effective Communication", type: 'soft' },
+        { name: "Team Work", type: 'soft' },
+        { name: "Flexibility", type: 'soft' },
+        { name: "Adaptibility", type: 'soft' }
+    ],
     education: [
         {
             degree: "Bachelor of Science",
@@ -221,7 +214,8 @@ export const profileData: IProfile = {
     ],
     social: {
         github: "https://github.com/rajesh4295",
-        linkedin: "https://www.linkedin.com/in/rajesh-kumar-04/"
+        linkedin: "https://www.linkedin.com/in/rajesh-kumar-04/",
+        twitter: "https://twitter.com/justone_raj"
     },
     acheivements: [
         "'MICROSOFT CERTIFIED PROFESSIONAL' (MCP): Exam: 70-480, 84.50%.",

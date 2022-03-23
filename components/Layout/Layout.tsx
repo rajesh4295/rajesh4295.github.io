@@ -1,5 +1,5 @@
 import React, {useContext, useState} from 'react'
-import { PersonalDetails, Header, Summary, Skills, Experience } from '@components';
+import { PersonalDetails, Header, Footer, Summary, Skills, Experience, Education } from '@components';
 import styles from '@styles/Layout.module.scss';
 import {IAccordian} from '@models';
 import { Accordion, AccordionDetails, AccordionSummary, Box, Typography } from '@mui/material';
@@ -27,6 +27,11 @@ export const Layout = () => {
         title: "Experience",
         content: <Experience />,
         panelId: "panel3"
+      },
+      {
+        title: "Education",
+        content: <Education />,
+        panelId: "panel4"
       }
     ]
   };
@@ -58,6 +63,7 @@ export const Layout = () => {
                 </Accordion>
               })
             }
+            <Footer />
         </Box>
     </Box>
   )

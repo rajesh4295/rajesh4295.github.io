@@ -1,9 +1,8 @@
 import { Box, Card, CardHeader, CardContent, Divider, List, ListItem, ListItemIcon, Chip } from '@mui/material'
 import React from 'react';
 import { profileData } from '@utility';
-import { IJobHistory, IProject } from '@models';
 import styles from '@styles/Experience.module.scss';
-import { StarBorder } from '@mui/icons-material';
+import { ArrowRight } from '@mui/icons-material';
 
 export const Experience = () => {
 
@@ -12,7 +11,7 @@ export const Experience = () => {
       {
         profileData?.jobHistory?.map((job, index) => {
           return <Card key={index} className={styles.card}>
-              <CardHeader className={styles.header} title={job.companyName} subheader={job.role}>
+              <CardHeader className={styles.header} titleTypographyProps={{fontWeight: '900'}} title={job.companyName} subheader={job.role}>
               </CardHeader>
               <CardContent className={styles.content}>
                 {
@@ -29,7 +28,7 @@ export const Experience = () => {
                               proj?.responsibilities?.map((resp, index) => {
                                 return <ListItem key={index} disablePadding>
                                     <ListItemIcon>
-                                      <StarBorder fontSize='small' />
+                                      <ArrowRight fontSize='small' />
                                     </ListItemIcon>
                                     {resp}
                                   </ListItem>

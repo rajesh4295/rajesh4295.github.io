@@ -2,20 +2,28 @@ import React, { ReactNode, useContext } from 'react';
 import {AppContext, profileData} from '@utility';
 import styles from '@styles/Skills.module.scss';
 import { Box, Divider, List, ListItem, ListItemIcon, ListItemText, useMediaQuery } from '@mui/material';
-import { DirectionsRun, DirectionsWalk, Elderly, Skateboarding } from '@mui/icons-material';
-import { skillLevel } from '@models';
+import { DirectionsRun, DirectionsWalk, Elderly, Memory, Skateboarding } from '@mui/icons-material';
+import { ISkills, skillLevel, skillType } from '@models';
+
+type Level = skillLevel | skillType;
 
 export const Skills = () => {
   const { theme } = useContext(AppContext);
   const isSmall = useMediaQuery('(max-width: 760px)');
-  console.log(isSmall)
 
-  const renderSkills = (level: skillLevel, icon: ReactNode) => {
+  const renderSkills = (level?: skillLevel, type?: skillType, icon?: ReactNode) => {
+    let skills: ISkills[] = [];
+    if (level) {
+      skills = profileData.skills?.filter(skill => skill?.level === level) || [];
+    } else if (type) {
+      skills = profileData.skills?.filter(skill => skill?.type === type) || [];
+    }
+
     return <Box className={styles.category}>
-      <Box className={styles.title} sx={{color: theme.palette.secondary.main}}>{level.toUpperCase()}</Box>
+      <Box className={styles.title} sx={{color: theme.palette.secondary.main}}>{level?.toUpperCase() || type?.toUpperCase()}</Box>
         <List>
         {
-          profileData.skills?.professional?.filter(skill => skill.level === level).map((skill, index) => {
+          skills?.filter(skill => skill?.level === level).map((skill, index) => {
             return (
               <ListItem key={index} disablePadding>
                 <ListItemIcon>
@@ -34,13 +42,15 @@ export const Skills = () => {
 
   return (
     <Box className={styles.skills}>
-      {renderSkills('advanced',  <Skateboarding />)}
+      {renderSkills('advanced', undefined, <Skateboarding />)}
       <Divider orientation={isSmall ? 'horizontal' : 'vertical'} flexItem />
-      {renderSkills('competent', <DirectionsRun />)}
+      {renderSkills('competent', undefined, <DirectionsRun />)}
       <Divider orientation={isSmall ? 'horizontal' : 'vertical'} flexItem />
-      {renderSkills('moderate', <DirectionsWalk />)}
+      {renderSkills('moderate', undefined, <DirectionsWalk />)}
       <Divider orientation={isSmall ? 'horizontal' : 'vertical'} flexItem />
-      {renderSkills('learning', <Elderly />)}
+      {renderSkills('learning', undefined, <Elderly />)}
+      <Divider orientation={isSmall ? 'horizontal' : 'vertical'} flexItem />
+      {renderSkills(undefined, 'soft', <Memory />)}
     </Box>
   )
 }
