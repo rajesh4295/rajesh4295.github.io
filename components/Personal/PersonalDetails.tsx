@@ -5,6 +5,14 @@ import { AppContext, profileData } from '@utility';
 
 export const PersonalDetails = () => {
   const { theme } = useContext(AppContext);
+  const resumeFileName = "Rajesh_Kumar_Resume.pdf";
+
+  const onDownload = () => {
+    const link = document.createElement("a");
+    link.download = resumeFileName;
+    link.href = `/${resumeFileName}`;
+    link.click();
+  };
 
   return (
     <Box className={styles.details}>
@@ -19,7 +27,7 @@ export const PersonalDetails = () => {
             <Box className={styles.title} sx={{color: theme.palette.secondary.main}}>
                 {profileData.personal?.title}
             </Box>
-            <Button className={styles.resumeBtn} color='inherit' variant='outlined'>Download Resume</Button>
+            <Button className={styles.resumeBtn} onClick={onDownload} color='inherit' variant='outlined'>Download Resume</Button>
           </Box>
           <Divider orientation='vertical' flexItem />
           <Box className={styles.exp}><span className={styles.expNum}>{profileData.personal?.experience}</span> YOE</Box>
